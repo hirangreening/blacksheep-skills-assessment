@@ -1,0 +1,240 @@
+/* =========================================
+   Base & Global Styles
+   ========================================= */
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased; /* Makes text look smoother */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1440px; 
+    height: 601px; 
+    margin: 0 auto; 
+    
+    background-image: 
+        linear-gradient(to right, rgba(34, 34, 34, 0.9) 0%, rgba(34, 34, 34, 0.6) 45%, rgba(34, 34, 34, 0) 70%), 
+        url('assets/main-banner.png');
+    
+    background-size: auto 100%; 
+    background-position: right center; 
+    background-repeat: no-repeat;
+    background-color: #222; 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 15%; 
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 588px; 
+    color: #FFFFFF;
+    margin-top: 50px; 
+}
+
+.hero h1 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 56px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    max-width: 443px; 
+}
+
+/* =========================================
+   Buttons & Links
+   ========================================= */
+.btn-primary {
+    display: inline-block;
+    background-color: #DE6C17;
+    color: #FFFFFF;
+    padding: 12px 33px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c45a10;
+}
+
+.btn-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #DE6C17;
+    text-decoration: none;
+    margin-top: auto; /* Pushes the link to the bottom of the card */
+}
+
+/* The little orange chevron */
+.btn-link::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 3px solid #DE6C17;
+    border-right: 3px solid #DE6C17;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+/* =========================================
+   Hero Wave Divider
+   ========================================= */
+.hero-wave {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 10;
+    pointer-events: none; /* Prevents the wave from blocking clicks on the button */
+}
+
+.hero-wave img {
+    width: 100%;
+    display: block;
+}
+
+/* =========================================
+   Services Section
+   ========================================= */
+.services {
+    padding: 52px 0 80px 0;
+    background-color: #FFFFFF;
+}
+
+.services h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #36413C;
+    margin-bottom: 10px;
+}
+
+.services-intro {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #5E6E66;
+    max-width: 689px;
+    margin: 0 auto 80px auto;
+}
+
+/* =========================================
+   Cards Grid
+   ========================================= */
+.cards-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 380px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 266px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #36413C;
+    margin: 0 0 10px 0;
+}
+
+.card p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5E6E66;
+    margin: 0 0 20px 0;
+    flex-grow: 1;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 1024px) {
+    .cards-grid {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+        background-size: cover;
+        background-position: center top;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        margin-top: 0;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
