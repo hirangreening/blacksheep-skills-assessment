@@ -4,68 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Sitting</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:500,700" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <img src="assets/main-banner.png" alt="Dog sitting banner">
-        </div>
+    <header class="hero">
+        <!-- Background Image (Added width/height to prevent layout shift) -->
+        <img src="assets/main-banner.png" class="hero-bg" width="1440" height="600" alt="" aria-hidden="true">
         
-        <div class="container hero-content">
-            <h1>Need a dog sitter?</h1>
-            <p>Find a trusted sitter in your community to look after your dog when you're busy or away.</p>
-            <a href="#" class="btn-primary">Learn More</a>
-        </div>
+        <!-- Gradient Overlay for text readability -->
+        <div class="hero-overlay"></div>
 
-        <div class="hero-wave">
-            <img src="assets/banner-wave.svg" alt="">
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p class="services-intro">Local & trusted pet sitters will treat your fur baby like family. You'll have piece of mind with regular communication and premium insurance.</p>
-
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="assets/card-image-walking.png" alt="Dog Walking">
-                    <div class="card-content">
-                        <h3>Dog Walking</h3>
-                        <p>Got a bit more on this week, and need someone to exercise your dog? Or need someone to regularly walk your dog as you're no longer able to do it? Look no futher than our service.</p>
-                        <a href="#" class="btn-link">Learn More &rsaquo;</a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="card">
-                    <img src="assets/card-image-boarding.png" alt="Dog Boarding">
-                    <div class="card-content">
-                        <h3>Dog Boarding</h3>
-                        <p>Instead of going to the kennels, your dog gets to go to someones else, often with other pets and people for company. Drop off and pick up options also available.</p>
-                        <a href="#" class="btn-link">Learn More &rsaquo;</a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card">
-                    <img src="assets/card-image-sitting.png" alt="Dog Sitting">
-                    <div class="card-content">
-                        <h3>Dog Sitting</h3>
-                        <p>Your dog gets the comfort and convenience of staying in their own home, as the sitter comes to yours! There is the added bonus of your home being looked after.</p>
-                        <a href="#" class="btn-link">Learn More &rsaquo;</a>
-                    </div>
-                </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Need a dog sitter?</h1>
+                <p>Find a trusted sitter in your community to look after your dog when you're busy or away.</p>
+                <a href="#" class="btn-primary">Learn More</a>
             </div>
         </div>
-    </section>
+        
+        <!-- The wave overlay -->
+        <div class="hero-wave">
+            <img src="assets/banner-wave.svg" alt="" aria-hidden="true">
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <main id="main-content">
+        <section class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p class="services-intro">Local &amp; trusted pet sitters will treat your fur baby like family. You'll have peace of mind with regular communication and premium insurance.</p>
+
+                <div class="cards-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <img src="assets/card-image-walking.png" width="430" height="301" loading="lazy" alt="A happy dog walking outside">
+                        <div class="card-content">
+                            <h3>Dog Walking</h3>
+                            <p>Got a bit more on this week, and need someone to exercise your dog? Or need someone to regularly walk your dog as you're no longer able to do it? Look no further than our service.</p>
+                            <a href="#" class="btn-link" aria-label="Learn more about Dog Walking">Learn More</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <img src="assets/card-image-boarding.png" width="431" height="302" loading="lazy" alt="A dog peering out of a blue dog house">
+                        <div class="card-content">
+                            <h3>Dog Boarding</h3>
+                            <p>Instead of going to the kennels, your dog gets to go to someone else's, often with other pets and people for company. Drop off and pick up options also available.</p>
+                            <a href="#" class="btn-link" aria-label="Learn more about Dog Boarding">Learn More</a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <img src="assets/card-image-sitting.png" width="433" height="303" loading="lazy" alt="A relaxed dog resting its head on a bed">
+                        <div class="card-content">
+                            <h3>Dog Sitting</h3>
+                            <p>Your dog gets the comfort and convenience of staying in their own home, as the sitter comes to yours! There is the added bonus of your home being looked after.</p>
+                            <a href="#" class="btn-link" aria-label="Learn more about Dog Sitting">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
